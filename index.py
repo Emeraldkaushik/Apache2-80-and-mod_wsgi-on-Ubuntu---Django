@@ -82,15 +82,20 @@ sudo a2ensite djangoproject.conf
 
 # The above command will give output something like this –
 
+'''
 Enabling site djangoproject.
 To activate the new configuration, you need to run:
 service apache2 reload
+'''
 
 # Wrapping Up Some Permissions Issues
 
 sudo ufw allow 'Apache Full'
 
 sudo chmod 664 /home/user/django_project/db.sqlite3
+'''
+path where database is there eg /home/ubuntu/project/db.sqlite3
+'''
 sudo chown :www-data /home/user/django_project/db.sqlite3
 
 sudo chown :www-data /home/user/django_project
