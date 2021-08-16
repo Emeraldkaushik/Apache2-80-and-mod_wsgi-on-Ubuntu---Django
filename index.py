@@ -108,9 +108,17 @@ sudo apache2ctl configtest
 It will output – Syntax OK which means no error and everything is working.
 '''
 
-# Back to our Project Setup
+# Enable djangoproject.conf and Disable  000-default.conf
 
-# Add ALLOWED_HOSTS = ['djangoproject.localhost']
+cd /etc/apache2/sites-available/
+
+ls
+
+sudo a2dissite 000-default.conf
+
+# Back to our Project
+
+Add ALLOWED_HOSTS = ['djangoproject.localhost']
 
 '''
 Now we need to run the run server by typing runserver command
